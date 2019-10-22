@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/mTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:textSize="52sp"
+        android:text="@string/default_stopwatch_format"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:padding="2dp"
+        android:background="@drawable/accessory_top_bottom_border"
+        android:baselineAligned="false"
+        android:layout_below="@id/mTime">
+
+        <NumberPicker
+            android:id="@+id/hoursList"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:theme="@style/MyTheme"
+            android:background="@color/white"
+            android:solidColor="@color/white"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+        </NumberPicker>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/colon"
+            android:textColor="@color/otherPurple"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <NumberPicker
+            android:id="@+id/minutesList"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:solidColor="@color/white"
+            android:theme="@style/MyTheme"
+            android:textAlignment="center">
+
+        </NumberPicker>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/colon"
+            android:textColor="@color/otherPurple"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <NumberPicker
+            android:id="@+id/secondsList"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:solidColor="@color/white"
+            android:theme="@style/MyTheme"
+            android:textAlignment="center">
+
+        </NumberPicker>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/h"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/s"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        style="?android:actionButtonStyle"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/start"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="@string/start"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@color/white"
+            android:background="@drawable/accessory_button"/>
+
+        <Button
+            android:id="@+id/pause"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="@string/reset"
+            android:visibility="gone"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@color/white"
+            android:background="@drawable/accessory_button"/>
+
+        <Button
+            android:id="@+id/restart"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="@string/reset"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@color/white"
+            android:background="@drawable/accessory_button"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
